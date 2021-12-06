@@ -28,6 +28,12 @@ namespace I.Controllers
 
         public eVoucherController(IConfiguration configuration)
         {
+            //
+            UserInfo info = new UserInfo();
+            info.UserName = "Hsan";
+            info.Password = "123456";
+
+            //
             _configuration = configuration;
             apiURL = _configuration.GetValue<string>("APIUrl:apiurl");
         }
